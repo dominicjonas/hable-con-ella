@@ -1,0 +1,77 @@
+$primary: #ee57a5;
+$primary-hover: #be4280;
+$focus-ring: rgba(244, 114, 182, 0.4);
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px $focus-ring;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &--primary {
+    background: $primary;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background: $primary-hover;
+    }
+  }
+
+  &--secondary {
+    background: #e5e7eb;
+    color: #374151;
+
+    &:hover:not(:disabled) {
+      background: #d1d5db;
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    border: 2px solid $primary;
+    color: $primary;
+
+    &:hover:not(:disabled) {
+      background: rgba($primary, 0.1);
+    }
+  }
+
+  &--ghost {
+    background: transparent;
+    color: $primary;
+
+    &:hover:not(:disabled) {
+      background: rgba($primary, 0.1);
+    }
+  }
+
+  &--sm {
+    padding: 0.375rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  &--md {
+    padding: 0.625rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  &--lg {
+    padding: 0.875rem 2rem;
+    font-size: 1.125rem;
+  }
+}
