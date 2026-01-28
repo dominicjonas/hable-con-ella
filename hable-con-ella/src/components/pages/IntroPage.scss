@@ -1,0 +1,57 @@
+.intro-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #1d0912, #280b1c);
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.intro-welcome {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #be185d;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.intro-subtitle {
+  font-size: 1.25rem;
+  color: #4b5563;
+  max-width: 500px;
+  margin: 0 auto 2.5rem auto;
+  line-height: 1.6;
+}
+
+// Make the big button stand out
+.intro-content .btn {
+  box-shadow: 0 8px 20px rgba(244, 114, 182, 0.3);
+}
+
+.intro-content .btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(244, 114, 182, 0.4);
+}
+
+// Responsive tweaks
+@media (max-width: 640px) {
+  .intro-welcome {
+    font-size: 2.5rem;
+  }
+
+  .intro-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .intro-content {
+    padding: 1.5rem 1rem;
+  }
+}
