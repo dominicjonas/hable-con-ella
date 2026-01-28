@@ -7,13 +7,11 @@ const IntroPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="intro-page">
-      <Header title="Hable con Ella" />
-
+    <div className="intro-page-container">
+      <Header />
       <div className="intro-content">
         <h2 className="intro-welcome">¡Bienvenido!</h2>
         <p className="intro-subtitle">
-          ...
         </p>
         <Button
           variant="primary"
