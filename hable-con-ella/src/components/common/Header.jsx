@@ -1,41 +1,29 @@
 // src/components/common/Header.jsx
-import PropTypes from 'prop-types';
-import { useNavigate } from 'react-router-dom';
-import Button from './Button'; // Reuse your Button!
-import './Header.scss';
+import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
+import Icon from "./Icon";
+import "./Header.scss";
 
 const Header = ({
-  title = 'Hable con Ella',
+  title = "Hable Con Ella",
   showBackButton = false,
-  rightContent = null, // Can be a JSX element (e.g., button, icon)
-  className = '',
+  showTitle = true,
+  showRightContent = false,
+  rightContent = null,
+  className = "",
 }) => {
   const navigate = useNavigate();
 
   return (
     <header className={`header ${className}`}>
       <div className="header-container">
-        {/* Left: Back button or empty space */}
         <div className="header-left">
-          {showBackButton && (
-            <Button
-              variant="ghost"
-              size="md"
-              onClick={() => navigate(-1)} // Go back one page
-              aria-label="Volver"
-            >
-              ← Volver
-            </Button>
-          )}
+          {showBackButton && <Icon className="back-button" name="chevron-left" onClick={() => navigate(-1)} />}
         </div>
 
-        {/* Center: Title */}
-        <h1 className="header-title">{title}</h1>
+        {showTitle && <h1 className="header-title">{title}</h1>}
 
-        {/* Right: Custom content (e.g., future favorites icon) */}
-        <div className="header-right">
-          {rightContent}
-        </div>
+        {showRightContent && <div className="header-right">{rightContent}</div>}
       </div>
     </header>
   );
@@ -44,7 +32,8 @@ const Header = ({
 Header.propTypes = {
   title: PropTypes.string,
   showBackButton: PropTypes.bool,
-  rightContent: PropTypes.node,
+  showTitle: PropTypes.bool,
+  showRightContent: PropTypes.bool,
   className: PropTypes.string,
 };
 
