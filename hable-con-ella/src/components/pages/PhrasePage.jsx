@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../common/Header";
+import ProgressBar from "../common/ProgressBar";
 import FooterNav from "../common/FooterNav";
 import { phraseData } from "../../data/phrases";
 import "./PhrasePage.scss";
@@ -37,6 +38,8 @@ const PhrasePage = () => {
   return (
     <div className="phrase-page">
       <Header title={categoryTitle} showBackButton={true} />
+
+      {phrases.length > 1 && <ProgressBar current={currentIndex + 1} total={phrases.length} />}
 
       <div className="phrase-content">
         <div className="phrase-card">
