@@ -31,15 +31,10 @@ Built as a side project to improve Spanish skills.
 - Browser-based voice recording (MediaRecorder API)
 - Upload recorded audio phrases (Firebase Storage / Supabase Storage)
 - Basic speech-to-text / pronunciation checking (Web Speech API or external service)
-- AI-generated phrase suggestions (e.g. OpenAI / Grok API for custom romantic or situational phrases)
+- AI-generated phrase suggestions (e.g. OpenAI / Grok API for custom or situational phrases)
 - Optional: streak tracking, daily goals, shareable phrase cards
 
 ## Screenshots
-
-<!-- Add screenshots here when ready -->
-<!-- ![Intro screen](screenshots/intro.png) -->
-<!-- ![Category selection](screenshots/categories.png) -->
-<!-- ![Phrase view (upcoming)](screenshots/phrases.png) -->
 
 ## Tech Stack (Phase 1)
 
@@ -52,9 +47,9 @@ Built as a side project to improve Spanish skills.
 
 ### Phase 1 (MVP polish)
 
-- [ ] Add Phrase / Swipe page (Figma → code)
-- [ ] Final navigation polish (active states, mobile menu if needed)
-- [ ] Header redesign (logo, theme toggle?)
+- [ ] Add Phrase / Swipe page / Phrase progression (Figma → code)
+- [ ] Final navigation polish (active states, mobile menu)
+- [ ] Header redesign (logo, icons, theme toggle)
 - [ ] Side nav / drawer (optional for larger screens)
 - [ ] Integrate real phrase data from data/ folder
 
