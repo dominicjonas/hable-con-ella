@@ -23,10 +23,24 @@ Built as a side project to improve Spanish skills.
 - SCSS (plain CSS, no Tailwind)  
 - PropTypes for type safety
 
-## TODO
-- [ ] Convert all styles into Tailwind
+## TODO Phase 1
 - [ ] Add Phrase page - Figma
-- [ ] Navigation       
+- [ ] Navigation
+- [ ] Header redesign
+- [ ] Side Nav
+- [ ] Phase data integration
+
+## TODO Phase 2
+- [ ] User login
+- [ ] BE user setup
+- [ ] Store BE phrases
+- [ ] Convert all styles into Tailwind
+
+## TODO Phase 3
+- [ ] Voice record
+- [ ] Voice upload
+- [ ] Voice recognition
+- [ ] AI phrase data  
 
 ## How to Run
 
