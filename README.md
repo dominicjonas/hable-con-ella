@@ -47,7 +47,7 @@ Built as a side project to improve Spanish skills.
 
 ### Phase 1 (MVP polish)
 
-- [ ] Add Phrase / Swipe page / Phrase progression (Figma → code)
+- [x] Add Phrase / Swipe page / Phrase progression (Figma → code)
 - [ ] Final navigation polish (active states, mobile menu)
 - [ ] Header redesign (logo, icons, theme toggle)
 - [ ] Side nav / drawer (optional for larger screens)
