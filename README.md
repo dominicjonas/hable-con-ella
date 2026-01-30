@@ -38,5 +38,8 @@ cd hable-con-ella
 # Install dependencies
 npm install
 
+# Node version
+nvm use 20
+
 # Start dev server
 npm run dev
