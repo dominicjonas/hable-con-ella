@@ -1,31 +1,31 @@
 export const categories = [
   {
-    id: "0",
+    id: "saludos",
     title: "Saludos",
     icon: "👋", // can be emoji or later an image
   },
   {
-    id: "1",
+    id: "comida",
     title: "Comida",
     icon: "🥩",
   },
   {
-    id: "2",
+    id: "lunfardo",
     title: "Lunfardo",
     icon: "🗣️",
   },
   {
-    id: "3",
+    id: "viaje",
     title: "Viaje",
     icon: "✈️",
   },
   {
-    id: "4",
+    id: "vida-diaria",
     title: "Vida Diaria",
     icon: "☕️",
   },
   {
-    id: "5",
+    id: "expresiones",
     title: "Expresiones",
     icon: "💬",
   },

@@ -1,0 +1,49 @@
+.phrase-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  margin: 0 auto;
+  z-index: 90;
+  max-width: 1200px;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0f172a;
+  padding: 1rem;
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    opacity: 0.7;
+  }
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.progress {
+  font-size: 1.1rem;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+// Mobile
+@media (max-width: 768px) {
+  .phrase-footer {
+    height: 70px;
+    padding: 0 1.5rem;
+  }
+}

@@ -1,9 +1,9 @@
-export const phrases = {
-  ["Saludos"]: [
+export const phraseData = {
+  ["saludos"]: [
     { phrase: "Hola", translation: "Hello", phonetic: "oh-lah" },
-    { phrase: "¿Cómo estás?", translation: "How are you?", phonetic: "koh-moh es-tahs" },
+    { phrase: "¿Cómo andás?", translation: "How are you?", phonetic: "koh-moh ahn-dahs" },
   ],
-  ["Comida"]: [
+  ["comida"]: [
     { phrase: "Tengo hambre", translation: "I am hungry", phonetic: "toh-goh on-ah-breh" },
     {
       phrase: "¿Dónde está el restaurante?",
@@ -11,11 +11,11 @@ export const phrases = {
       phonetic: "dohn-deh es-tah el re-sto-ran-te",
     },
   ],
-  ["Lunfardo"]: [
+  ["lunfardo"]: [
     { phrase: "Che", translation: "Hey (informal address)", phonetic: "chay" },
     { phrase: "Laburar", translation: "To work", phonetic: "lah-bu-rar" },
   ],
-  ["Viaje"]: [
+  ["viaje"]: [
     {
       phrase: "¿Dónde está la estación de tren?",
       translation: "Where is the train station?",
@@ -23,11 +23,11 @@ export const phrases = {
     },
     { phrase: "Necesito un taxi", translation: "I need a taxi", phonetic: "neh-seh-see-toh un tah-xee" },
   ],
-  ["Vida Diaria"]: [
+  ["vida-diaria"]: [
     { phrase: "¿Qué hora es?", translation: "What time is it?", phonetic: "koh-eh oh-rah es" },
     { phrase: "Estoy cansado", translation: "I am tired", phonetic: "es-toy kan-sah-doh" },
   ],
-  ["Expresiones"]: [
+  ["expresiones"]: [
     { phrase: "¡Qué quilombo!", translation: "What a mess!", phonetic: "koh-eh kee-yoh-mboh" },
     { phrase: "Estar al horno", translation: "To be in trouble", phonetic: "es-tar ah el oh-rno" },
   ],
