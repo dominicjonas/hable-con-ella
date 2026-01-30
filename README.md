@@ -52,6 +52,7 @@ Built as a side project to improve Spanish skills.
 - [ ] Header redesign (logo, icons, theme toggle)
 - [ ] Side nav / drawer (optional for larger screens)
 - [ ] Integrate real phrase data from data/ folder
+- [ ] Framer Motion
 
 ### Phase 2
 
@@ -59,6 +60,7 @@ Built as a side project to improve Spanish skills.
 - [ ] Backend user setup
 - [ ] Store phrases in backend
 - [ ] Convert all styles into Tailwind
+- [ ] GSAP
 
 ### Phase 3
 
