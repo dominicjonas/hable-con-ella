@@ -2,45 +2,51 @@
 
 **A minimalist React app for learning Argentine Spanish phrases**
 
-Hable Con Ella is a simple, personal tool to practice beginner-to-intermediate Argentine Spanish. It focuses on real conversational phrases, including voseo (vos conjugations), lunfardo slang, and everyday expressions unique to Argentina.
+Hable Con Ella is a simple, personal tool to practice beginner-to-intermediate Argentine Spanish.  
+It focuses on real conversational phrases, including voseo (vos conjugations), lunfardo slang, and everyday expressions unique to Argentina.
 
 Built as a side project to improve Spanish skills.
 
-## Features (Phase 1)
+## Features (Phase 1 – Current)
 
-- Categorized phrase lists (e.g., Basics, Voseo, Slang, Daily Life)
-- Clickable category cards with hover effects
-- Clean, mobile-friendly design
+- Categorized phrase lists (Basics, Voseo, Slang, Daily Life, Romantic)
+- Clickable category cards with hover & focus effects
+- Clean, responsive, mobile-first design
 - Reusable components: Button, Header, CategoryCard
-- Ready for future additions: favorites, audio pronunciation, user login
+- React Router navigation with back button support
+- Ready for expansion: favorites, audio, authentication
+
+## Planned Features
+
+### Phase 2 – User Accounts & Backend Basics
+
+- Email + password login / signup (Firebase Auth or Supabase)
+- User-specific data storage (favorites, progress, custom phrases)
+- Backend phrase management (move static data → Firestore / Supabase DB)
+- Migrate all SCSS → Tailwind CSS for faster styling & consistency
+- Protected routes & user dashboard
+
+### Phase 3 – Voice Interaction & AI Enhancement
+
+- Browser-based voice recording (MediaRecorder API)
+- Upload recorded audio phrases (Firebase Storage / Supabase Storage)
+- Basic speech-to-text / pronunciation checking (Web Speech API or external service)
+- AI-generated phrase suggestions (e.g., OpenAI / Grok API for custom romantic or situational phrases)
+- Optional: streak tracking, daily goals, shareable phrase cards
 
 ## Screenshots
 
-## Tech Stack
+<!-- Add screenshots here when ready -->
+<!-- ![Intro screen](screenshots/intro.png) -->
+<!-- ![Category selection](screenshots/categories.png) -->
+<!-- ![Phrase view (upcoming)](screenshots/phrases.png) -->
 
-- React + Vite  
-- React Router v6  
-- SCSS (plain CSS, no Tailwind)  
-- PropTypes for type safety
+## Tech Stack (Phase 1)
 
-## TODO Phase 1
-- [ ] Add Phrase page - Figma
-- [ ] Navigation
-- [ ] Header redesign
-- [ ] Side Nav
-- [ ] Phase data integration
-
-## TODO Phase 2
-- [ ] User login
-- [ ] BE user setup
-- [ ] Store BE phrases
-- [ ] Convert all styles into Tailwind
-
-## TODO Phase 3
-- [ ] Voice record
-- [ ] Voice upload
-- [ ] Voice recognition
-- [ ] AI phrase data  
+- React + Vite
+- React Router v6
+- SCSS (plain, no Tailwind yet)
+- PropTypes for prop validation
 
 ## How to Run
 
@@ -52,7 +58,7 @@ cd hable-con-ella
 # Install dependencies
 npm install
 
-# Node version
+# Use correct Node version (if using nvm)
 nvm use 20
 
 # Start dev server
