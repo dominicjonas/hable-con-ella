@@ -9,9 +9,11 @@ const FooterNav = ({ onPrev, onNext, currentIndex, total }) => {
         <Icon name="chevron-left" size={32} />
       </button>
 
-      <span className="progress">
-        {currentIndex + 1} / {total}
-      </span>
+      <div className="progress-dots">
+        {Array.from({ length: total }).map((_, idx) => (
+          <span key={idx} className={`dot ${idx === currentIndex ? "active" : ""}`} />
+        ))}
+      </div>
 
       <button
         className="nav-button next"

@@ -34,10 +34,28 @@
   transform: rotate(180deg);
 }
 
-.progress {
-  font-size: 1.1rem;
-  color: #4b5563;
-  font-weight: 500;
+.progress-dots {
+  display: flex;
+  align-items: center;
+  gap: 10px; // space between dots
+  flex: 1;
+  justify-content: center;
+  max-width: 60%; // prevent overflow on small screens
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #d1d5db; // light gray for inactive
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  width: 24px;
+  height: 6px;
+  background-color: #0f172a;
+  border-radius: 3px;
 }
 
 // Mobile
