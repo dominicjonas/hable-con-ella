@@ -1,6 +1,7 @@
 import CategoryCard from "../common/CategoryCard";
 import Header from "../common/Header";
 import "./CategoryPage.scss";
+import { categories } from "../../data/categories";
 
 const CategoryPage = () => {
   return (
@@ -8,12 +9,9 @@ const CategoryPage = () => {
       <Header showBackButton={true} title="Hable Con Ella" />
       <div className="category-page-container">
         <div className="category-card-container">
-          <CategoryCard icon="👋" title="Saludos" description="Greetings" />
-          <CategoryCard icon="🥩" title="Comida" description="Food" />
-          <CategoryCard icon="🗣️" title="Lunfardo" description="Slang" />
-          <CategoryCard icon="✈️" title="Viaje" description="Travel" />
-          <CategoryCard icon="☕️" title="Vida Diaria" description="Daily Life" />
-          <CategoryCard icon="💬" title="Expresiones" description="Expressions" />
+          {categories.map((category) => (
+            <CategoryCard key={category.id} icon={category.icon} title={category.title} />
+          ))}
         </div>
       </div>
     </>
