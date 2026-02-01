@@ -9,7 +9,7 @@ Built as a side project to improve Spanish skills.
 
 ## Features (Phase 1 – Current)
 
-- Categorised phrase lists (Basics, Voseo, Slang, Daily Life, Romantic)
+- Categorised phrase lists (Basics, Voseo, Slang, Daily Life)
 - Clickable category cards with hover & focus effects
 - Clean, responsive, mobile-first design
 - Reusable components: Button, Header, CategoryCard
