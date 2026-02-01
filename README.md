@@ -2,7 +2,7 @@
 
 **A minimalist React app for learning Argentine Spanish phrases**
 
-Hable Con Ella is a simple, personal tool to practise beginner-to-intermediate Argentine Spanish.  
+Hable Con Ella is a simple, personal tool to practise beginner-to-intermediate Argentine Spanish.
 It focuses on real conversational phrases, including voseo (vos conjugations), lunfardo slang, and everyday expressions unique to Argentina.
 
 Built as a side project to improve Spanish skills.
@@ -48,10 +48,10 @@ Built as a side project to improve Spanish skills.
 ### Phase 1 (MVP polish)
 
 - [x] Add Phrase / Swipe page / Phrase progression (Figma → code)
-- [ ] Final navigation polish (active states, mobile menu)
-- [ ] Header redesign (logo, icons, theme toggle)
-- [ ] Side nav / drawer (optional for larger screens)
-- [ ] Integrate real phrase data from data/ folder
+- [x] Final navigation polish (active states, mobile menu)
+- [x] Header redesign (logo, icons, theme toggle)
+- [x] Side nav / drawer (optional for larger screens)
+- [x] Integrate real phrase data from data/ folder
 - [ ] Framer Motion
 
 ### Phase 2
@@ -84,3 +84,4 @@ nvm use 20
 
 # Start dev server
 npm run dev
+```
