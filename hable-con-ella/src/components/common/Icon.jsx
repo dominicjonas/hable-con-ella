@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
 
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, Menu } from "lucide-react";
 
 const iconMap = {
   "chevron-left": ChevronLeft,
+  menu: Menu,
 };
 
 const Icon = ({ name, size = 28, color = "#666", strokeWidth = 2, className = "", onClick, ...props }) => {

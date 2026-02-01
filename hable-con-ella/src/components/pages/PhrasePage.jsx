@@ -16,7 +16,7 @@ const PhrasePage = () => {
   if (!currentPhrase) {
     return (
       <div className="phrase-page">
-        <Header showBackButton={true} title={categoryId || "Categoría"} />
+        <Header showBackButton={true} showRightContent={true} title={categoryId || "Categoría"} />
         <div className="phrase-content">
           <p>No phrases found for this category yet.</p>
         </div>

@@ -8,7 +8,7 @@ const CategoryPage = () => {
   const navigate = useNavigate();
   return (
     <>
-      <Header showBackButton={true} title="Categorías" />
+      <Header showBackButton={true} showRightContent={true} title="Categorías" />
       <div className="category-page-container">
         <div className="category-card-container">
           {categories.map((category) => (

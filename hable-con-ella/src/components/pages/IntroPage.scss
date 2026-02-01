@@ -10,7 +10,7 @@
   justify-content: center;
   padding: 2rem 1.5rem;
   text-align: center;
-  height: 100%;
+  height: 80vh;
 }
 
 .intro-welcome {
@@ -31,12 +31,13 @@
 
 // Make the big button stand out
 .intro-content .btn {
-  box-shadow: 0 8px 20px rgba(244, 114, 182, 0.3);
+  background: #1e293b;
+  box-shadow: 0 8px 20px rgba(103, 103, 103, 0.3);
 }
 
 .intro-content .btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 12px 25px rgba(244, 114, 182, 0.4);
+  box-shadow: 0 12px 25px #1e293baa;
 }
 
 // Responsive tweaks
