@@ -18,8 +18,18 @@ const SideDrawer = ({ isOpen, onClose }) => {
         <nav className="drawer-nav">
           <ul>
             <li>
+              <a href="/" onClick={onClose}>
+                Home
+              </a>
+            </li>
+            <li>
               <a href="#" onClick={onClose}>
                 Profile
+              </a>
+            </li>
+            <li>
+              <a href="/categories" onClick={onClose}>
+                Categories
               </a>
             </li>
             <li>
