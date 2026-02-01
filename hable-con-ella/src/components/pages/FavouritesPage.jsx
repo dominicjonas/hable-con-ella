@@ -62,7 +62,7 @@ const FavouritesPage = () => {
     <div className="favourites-page">
       <Header title="Favourites" showBackButton={true} />
 
-      {allFavourites.length > 1 && <ProgressBar current={currentIndex + 1} total={allFavourites.length} />}
+      <ProgressBar current={currentIndex + 1} total={allFavourites.length} />
 
       <div className="icon-container">
         <Icon
