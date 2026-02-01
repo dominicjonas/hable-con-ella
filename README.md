@@ -15,6 +15,7 @@ Built as a side project to improve Spanish skills.
 - Reusable components: Button, Header, CategoryCard
 - React Router navigation with back button support
 - Ready for expansion: favourites, audio, authentication
+- Side navigation
 - Favourite Context
 
 ## Planned Features
@@ -51,7 +52,7 @@ Built as a side project to improve Spanish skills.
 - [x] Add Phrase / Swipe page / Phrase progression (Figma → code)
 - [x] Final navigation polish (active states, mobile menu)
 - [x] Header redesign (logo, icons, theme toggle)
-- [x] Side nav / drawer (optional for larger screens)
+- [x] Side nav
 - [x] Integrate real phrase data from data/ folder
 - [x] Favourite Context
 - [ ] Framer Motion
