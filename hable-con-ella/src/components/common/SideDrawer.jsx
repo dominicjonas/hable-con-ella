@@ -23,7 +23,7 @@ const SideDrawer = ({ isOpen, onClose }) => {
               </a>
             </li>
             <li>
-              <a href="#" onClick={onClose}>
+              <a href="/favourites" onClick={onClose}>
                 Favourites
               </a>
             </li>

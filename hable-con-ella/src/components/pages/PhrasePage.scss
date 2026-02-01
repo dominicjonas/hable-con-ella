@@ -43,3 +43,13 @@
   font-style: italic;
   margin: 0;
 }
+
+.empty-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #0f172a;
+  padding: 0 3rem;
+  text-align: center;
+}
