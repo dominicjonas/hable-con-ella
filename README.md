@@ -7,7 +7,9 @@ It focuses on real conversational phrases, including voseo (vos conjugations), l
 
 Built as a side project to improve Spanish skills.
 
-## Features (Phase 1 – Current)
+## Features
+
+### Phase 1 
 
 - Categorised phrase lists (Basics, Voseo, Slang, Daily Life)
 - Clickable category cards with hover & focus effects
@@ -18,15 +20,15 @@ Built as a side project to improve Spanish skills.
 - Side navigation
 - Favourite Context
 
-## Planned Features
-
-### Phase 2 – User Accounts & Backend Basics
+### Phase 2 – User Accounts & Backend Basics (current)
 
 - Email + password login / signup (Firebase Auth or Supabase)
 - User-specific data storage (favourites, progress, custom phrases)
 - Backend phrase management (move static data → Firestore / Supabase DB)
 - Migrate all SCSS → Tailwind CSS for faster styling & consistency
 - Protected routes & user dashboard
+
+## Planned Features
 
 ### Phase 3 – Voice Interaction & AI Enhancement
 
@@ -47,7 +49,7 @@ Built as a side project to improve Spanish skills.
 
 ## Current TODO
 
-### Phase 1 (MVP polish)
+### Phase 1 (MVP)
 
 - [x] Add Phrase / Swipe page / Phrase progression (Figma → code)
 - [x] Final navigation polish (active states, mobile menu)
@@ -55,7 +57,6 @@ Built as a side project to improve Spanish skills.
 - [x] Side nav
 - [x] Integrate real phrase data from data/ folder
 - [x] Favourite Context
-- [ ] Framer Motion
 
 ### Phase 2
 
@@ -64,6 +65,7 @@ Built as a side project to improve Spanish skills.
 - [ ] Store phrases in backend
 - [ ] Convert all styles into Tailwind
 - [ ] GSAP
+- [ ] Framer Motion
 
 ### Phase 3
 
