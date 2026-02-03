@@ -1,6 +1,6 @@
 export const phraseData = {
   ["saludos"]: [
-    { phrase: "Buenos Dias, Mi Luz", translation: "Good morning, Luz ♥️", phonetic: "bwen-dohs dee-ahs, mee Luz" },
+    { phrase: "Buenos Dias", translation: "Good morning", phonetic: "bwen-dohs dee-ahs" },
     { phrase: "¿Cómo andás?", translation: "How are you?", phonetic: "koh-moh ahn-dahs" },
     { phrase: "¡Che, qué hacés?", translation: "Hey, what are you up to?", phonetic: "cheh, keh ah-ses" },
     { phrase: "¿Todo bien?", translation: "Everything good?", phonetic: "toh-doh byen" },
