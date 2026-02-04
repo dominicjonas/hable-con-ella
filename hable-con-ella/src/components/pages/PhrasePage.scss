@@ -1,5 +1,5 @@
 .phrase-page {
-  min-height: 100vh;
+  height: 100vh;
   padding-bottom: 100px; // space for fixed footer
 }
 
@@ -52,4 +52,8 @@
   color: #0f172a;
   padding: 0 3rem;
   text-align: center;
+
+  p {
+    margin: 0 auto;
+  }
 }
