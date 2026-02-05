@@ -1,9 +1,23 @@
 // src/components/common/SideDrawer.jsx
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom"; // if you want real links later
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../hooks/useAuth";
 import "./SideDrawer.scss";
 
 const SideDrawer = ({ isOpen, onClose }) => {
+  const { user } = useAuth();
+  const navigate = useNavigate();
+  const { logout } = useAuth();
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+      navigate("/login");
+    } catch (err) {
+      console.error("Error logging out:", err);
+    }
+  };
+
   return (
     <>
       <div className={`drawer-overlay ${isOpen ? "open" : ""}`} onClick={onClose} />
@@ -32,21 +46,31 @@ const SideDrawer = ({ isOpen, onClose }) => {
                 Categories
               </a>
             </li>
-            <li>
-              <a href="/favourites" onClick={onClose}>
-                Favourites
-              </a>
-            </li>
+            {user && (
+              <li>
+                <a href="/favourites" onClick={onClose}>
+                  Favourites
+                </a>
+              </li>
+            )}
             <li>
               <a href="#" onClick={onClose}>
                 Settings
               </a>
             </li>
-            <li className="logout">
-              <a href="#" onClick={onClose}>
-                Log out
-              </a>
-            </li>
+            {user && (
+              <li className="logout">
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleLogout();
+                  }}
+                >
+                  Log out
+                </a>
+              </li>
+            )}
           </ul>
         </nav>
       </div>
