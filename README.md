@@ -9,7 +9,7 @@ Built as a side project to improve Spanish skills.
 
 ## Features
 
-### Phase 1 
+### Phase 1
 
 - Categorised phrase lists (Basics, Voseo, Slang, Daily Life)
 - Clickable category cards with hover & focus effects
@@ -60,8 +60,10 @@ Built as a side project to improve Spanish skills.
 
 ### Phase 2
 
-- [ ] User login
+- [x] User login setup
+- [ ] Multiple login methods
 - [ ] Backend user setup
+- [ ] Frontend user profile
 - [ ] Store phrases in backend
 - [ ] Convert all styles into Tailwind
 - [ ] GSAP
