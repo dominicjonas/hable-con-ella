@@ -61,12 +61,12 @@ Built as a side project to improve Spanish skills.
 ### Phase 2
 
 - [x] User login setup
-- [ ] Store favourites in db
-- [ ] Multiple login methods
+- [x] Store favourites in db
+- [x] Google login / sign-up
+- [ ] Adding a logout confirmation dialog
 - [ ] Backend user setup
 - [ ] Frontend user profile
 - [ ] Store phrases in backend
-- [ ] Convert all styles into Tailwind
 - [ ] GSAP
 - [ ] Framer Motion
 
