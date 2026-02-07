@@ -21,7 +21,7 @@ const FavouritesPage = () => {
           phraseId,
           categoryId: catId,
           index,
-          ...phrase, // phrase, translation, phonetic
+          ...phrase,
         });
       }
     });
@@ -52,7 +52,6 @@ const FavouritesPage = () => {
 
   const handleUnfavourite = () => {
     toggleFavourite(currentFavourite.phraseId);
-    // Optional: stay on current index or move to next if last one removed
     if (currentIndex >= allFavourites.length - 1 && currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
     }
@@ -90,7 +89,7 @@ const FavouritesPage = () => {
           <h2 className="phrase-spanish">{currentFavourite.phrase}</h2>
           <p className="phrase-english">{currentFavourite.translation}</p>
           <p className="phrase-phonetic">/{currentFavourite.phonetic}/</p>
-          {/* Optional: show category */}
+          {/* show category */}
           <p className="phrase-category">
             From: {currentFavourite.categoryId.charAt(0).toUpperCase() + currentFavourite.categoryId.slice(1)}
           </p>
