@@ -12,6 +12,7 @@ const SignupPage = () => {
   const [loading, setLoading] = useState(false);
 
   const { signup } = useAuth();
+  const { signInWithGoogle } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -50,6 +51,15 @@ const SignupPage = () => {
     }
   };
 
+  const handleGoogleSignIn = async () => {
+    try {
+      await signInWithGoogle();
+      navigate("/categories");
+    } catch (err) {
+      setError(err.message || "Google sign-in failed, please try again.");
+    }
+  };
+
   return (
     <div className="auth-page">
       <h2>Create Account</h2>
@@ -79,6 +89,21 @@ const SignupPage = () => {
           {loading ? "Creating account..." : "Create Account"}
         </Button>
       </form>
+
+      <div className="auth-divider">
+        <span>or</span>
+      </div>
+
+      <Button variant="outline" size="lg" onClick={handleGoogleSignIn} disabled={loading}>
+        <img
+          src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+          alt="Google"
+          width="18"
+          height="18"
+          style={{ marginRight: "0.75rem" }}
+        />
+        Sign in with Google
+      </Button>
 
       <p className="auth-link">
         Already have an account? <span onClick={() => navigate("/login")}>Log in</span>
