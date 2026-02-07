@@ -61,7 +61,7 @@ Built as a side project to improve Spanish skills.
 ### Phase 2
 
 - [x] User login setup
-- [ ] Store favourites in db
+- [x] Store favourites in db
 - [ ] Multiple login methods
 - [ ] Backend user setup
 - [ ] Frontend user profile
