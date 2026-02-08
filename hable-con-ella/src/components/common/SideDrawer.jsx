@@ -19,13 +19,18 @@ const SideDrawer = ({ isOpen, onClose }) => {
     }
   };
 
+  console.log("user>>>>", user);
+
   return (
     <>
       <div className={`drawer-overlay ${isOpen ? "open" : ""}`} onClick={onClose} />
       <div className={`side-drawer ${isOpen ? "open" : ""}`}>
         <div className="drawer-header">
-          <h2>Menu</h2>
-          <button className="close-button" onClick={onClose} aria-label="Close menu">
+          {user && user.photoURL && (
+            <img src={user.photoURL} alt="Profile" style={{ width: "40px", height: "40px", borderRadius: "50%" }} />
+          )}
+          <h2>{user?.displayName || user?.email?.split("@")[0] || "Menu"}</h2>
+          <button className="close-button" onClick={onClose}>
             ×
           </button>
         </div>

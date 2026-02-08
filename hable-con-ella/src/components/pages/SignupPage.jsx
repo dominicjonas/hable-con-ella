@@ -9,6 +9,7 @@ const SignupPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [displayName, setDisplayName] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -34,7 +35,7 @@ const SignupPage = () => {
     setLoading(true);
 
     try {
-      await signup(email, password);
+      await signup(email, password, displayName);
       navigate("/categories");
       toast.success("Account created successfully! ¡Bienvenida!");
     } catch (err) {
@@ -84,6 +85,13 @@ const SignupPage = () => {
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
           required
+        />
+
+        <input
+          type="text"
+          placeholder="Display name (optional)"
+          value={displayName}
+          onChange={(e) => setDisplayName(e.target.value)}
         />
 
         <Button variant="primary" size="lg" type="submit" disabled={loading}>

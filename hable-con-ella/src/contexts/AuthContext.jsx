@@ -7,6 +7,7 @@ import {
   signOut,
   GoogleAuthProvider,
   signInWithPopup,
+  updateProfile,
 } from "firebase/auth";
 import { doc, setDoc, getDoc } from "firebase/firestore";
 
@@ -35,33 +36,58 @@ export const AuthProvider = ({ children }) => {
 
   const login = (email, password) => signInWithEmailAndPassword(auth, email, password);
 
-  const signup = async (email, password) => {
+  const signup = async (email, password, displayName = "") => {
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-    await setDoc(doc(db, "users", userCredential.user.uid), { favourites: [] });
+    const user = userCredential.user;
+
+    if (displayName) {
+      await updateProfile(user, {
+        displayName: displayName.trim(),
+      });
+    }
+
+    // Save to Firestore (for other custom data)
+    const userDocRef = doc(db, "users", user.uid);
+    await setDoc(
+      userDocRef,
+      {
+        displayName: displayName.trim() || email.split("@")[0],
+        email: user.email,
+        photoURL: user.photoURL || null,
+        createdAt: new Date().toISOString(),
+        favourites: [],
+      },
+      { merge: true },
+    ); // merge prevents overwriting existing data
+
+    // Refresh the user object to ensure updated profile is available
+    await user.reload();
+
     return userCredential;
   };
 
   const logout = () => signOut(auth);
 
   // Google Sign-in
-
   const signInWithGoogle = async () => {
     const provider = new GoogleAuthProvider();
-    try {
-      const result = await signInWithPopup(auth, provider);
-      const user = result.user;
+    const result = await signInWithPopup(auth, provider);
+    const user = result.user;
 
-      // Check if user doc exists, if not create it
-      const userDocRef = doc(db, "users", user.uid);
-      const docSnap = await getDoc(userDocRef);
-      if (!docSnap.exists()) {
-        await setDoc(userDocRef, { favourites: [] });
-      }
-      return result;
-    } catch (error) {
-      console.error("Google sign-in error:", error);
-      throw error;
+    const userDocRef = doc(db, "users", user.uid);
+    const docSnap = await getDoc(userDocRef);
+
+    if (!docSnap.exists()) {
+      await setDoc(userDocRef, {
+        displayName: user.displayName || "Google User",
+        email: user.email,
+        photoURL: user.photoURL,
+        createdAt: new Date().toISOString(),
+        favourites: [],
+      });
     }
+
+    return result;
   };
 
   return (
