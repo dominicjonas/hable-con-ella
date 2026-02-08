@@ -1,5 +1,6 @@
 // src/components/common/SideDrawer.jsx
 import PropTypes from "prop-types";
+import { toast } from "sonner";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
 import "./SideDrawer.scss";
@@ -13,8 +14,9 @@ const SideDrawer = ({ isOpen, onClose }) => {
     try {
       await logout();
       navigate("/login");
-    } catch (err) {
-      console.error("Error logging out:", err);
+      toast.success("Logged out successfully! Nos vemos");
+    } catch (error) {
+      toast.error("Logout failed. ¡Qué macana!", error);
     }
   };
 

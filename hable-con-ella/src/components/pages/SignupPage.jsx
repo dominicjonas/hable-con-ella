@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
 import { useAuth } from "../../hooks/useAuth";
 import Button from "../common/Button";
 import "./AuthPages.scss";
@@ -34,9 +35,9 @@ const SignupPage = () => {
 
     try {
       await signup(email, password);
-      navigate("/categories"); // redirect after successful signup
+      navigate("/categories");
+      toast.success("Account created successfully! ¡Bienvenida!");
     } catch (err) {
-      // Handle common Firebase errors
       let message = "Failed to create account. Please try again.";
       if (err.code === "auth/email-already-in-use") {
         message = "This email is already registered.";

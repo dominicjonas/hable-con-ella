@@ -1,6 +1,7 @@
 // src/pages/Login.jsx
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
 import { useAuth } from "../../hooks/useAuth";
 import Button from "../common/Button";
 import "./AuthPages.scss"; // shared styles, create below
@@ -22,8 +23,9 @@ const Login = () => {
     try {
       await login(email, password);
       navigate("/categories");
+      toast.success("Logged in successfully! ¡Bienvenida de nuevo!");
     } catch (err) {
-      setError(err.message || "Error logging in, please try again.");
+      toast.error("Login failed, please try again. ¡Qué macana! " + (err.message || ""));
     } finally {
       setLoading(false);
     }
@@ -33,8 +35,9 @@ const Login = () => {
     try {
       await signInWithGoogle();
       navigate("/categories");
+      toast.success("Logged in with Google! ¡Bienvenida de nuevo!");
     } catch (err) {
-      setError(err.message || "Google sign-in failed, please try again.");
+      toast.error("Google sign-in failed, please try again. ¡Qué macana! " + (err.message || ""));
     }
   };
 
