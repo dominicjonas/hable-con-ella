@@ -37,5 +37,8 @@ dist-ssr
 firebase.json
 .firebaserc
 
+# Firebase service account
+service-account-key.json
+
 # Optional: coverage reports, temp files, etc.
 coverage

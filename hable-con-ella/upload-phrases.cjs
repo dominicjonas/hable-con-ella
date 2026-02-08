@@ -1,13 +1,26 @@
-export const phraseData = {
-  ["saludos"]: [
+// upload-phrases.js
+// RUN WITH: node upload-phrases.js
+
+const admin = require("firebase-admin");
+
+const serviceAccount = require("./service-account-key.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+});
+
+const db = admin.firestore();
+
+const phraseData = {
+  saludos: [
     { phrase: "Buenos Dias", translation: "Good morning", phonetic: "bwen-dohs dee-ahs" },
     { phrase: "¿Cómo andás?", translation: "How are you?", phonetic: "koh-moh ahn-dahs" },
     { phrase: "¡Che, qué hacés?", translation: "Hey, what are you up to?", phonetic: "cheh, keh ah-ses" },
     { phrase: "¿Todo bien?", translation: "Everything good?", phonetic: "toh-doh byen" },
-    { phrase: "¡Buen día, loco!", translation: "Good morning, dude!", phonetic: "bwen dee-ah, loh-koh" }, // "loco" = informal "mate/dude"
+    { phrase: "¡Buen día, loco!", translation: "Good morning, dude!", phonetic: "bwen dee-ah, loh-koh" },
     { phrase: "¿Qué onda?", translation: "What's up?", phonetic: "keh ohn-dah" },
   ],
-  ["comida"]: [
+  comida: [
     { phrase: "Tengo hambre", translation: "I'm hungry", phonetic: "toh-goh ahm-breh" },
     {
       phrase: "¿Dónde está el restaurante?",
@@ -27,7 +40,7 @@ export const phraseData = {
       phonetic: "meh mweh-roh deh gah-nahs deh oo-nah mee-lah-neh-sah",
     },
   ],
-  ["lunfardo"]: [
+  lunfardo: [
     { phrase: "Che", translation: "Hey (informal address)", phonetic: "chay" },
     { phrase: "Laburar", translation: "To work", phonetic: "lah-boo-rar" },
     { phrase: "Fiaca", translation: "Laziness / no motivation", phonetic: "fee-ah-kah" },
@@ -35,7 +48,7 @@ export const phraseData = {
     { phrase: "Chamuyar", translation: "To sweet-talk / chat up", phonetic: "chah-moo-yar" },
     { phrase: "Pibe / Piba", translation: "Guy / Girl (young person)", phonetic: "pee-beh / pee-bah" },
   ],
-  ["viaje"]: [
+  viaje: [
     {
       phrase: "¿Dónde está la estación de tren?",
       translation: "Where is the train station?",
@@ -63,7 +76,7 @@ export const phraseData = {
       phonetic: "keh leen-doh pah-ee-sah-heh",
     },
   ],
-  ["vida-diaria"]: [
+  vidaDiaria: [
     { phrase: "¿Qué hora es?", translation: "What time is it?", phonetic: "keh oh-rah es" },
     { phrase: "Estoy cansado", translation: "I'm tired", phonetic: "es-toy kahn-sah-doh" },
     { phrase: "Me voy a duchar", translation: "I'm going to shower", phonetic: "meh voy ah doo-char" },
@@ -71,12 +84,44 @@ export const phraseData = {
     { phrase: "¿Querés mate?", translation: "Do you want mate?", phonetic: "keh-res mah-teh" },
     { phrase: "¡Qué calor de locos!", translation: "What crazy heat!", phonetic: "keh kah-lor deh loh-kohs" },
   ],
-  ["expresiones"]: [
+  expresiones: [
     { phrase: "¡Qué quilombo!", translation: "What a mess!", phonetic: "keh kee-lohm-boh" },
     { phrase: "Estar al horno", translation: "To be in trouble / screwed", phonetic: "es-tar ahl or-noh" },
     { phrase: "No da", translation: "It doesn't work / it's not possible", phonetic: "noh dah" },
     { phrase: "¡Qué bajón!", translation: "What a downer!", phonetic: "keh bah-hohn" },
-    { phrase: "La puta madre", translation: "Damn it! (strong exclamation)", phonetic: "lah poo-tah mah-dreh" }, // Use carefully – very common but vulgar
+    { phrase: "La puta madre", translation: "Damn it! (strong exclamation)", phonetic: "lah poo-tah mah-dreh" },
     { phrase: "Todo piola", translation: "Everything's cool / fine", phonetic: "toh-doh pee-oh-lah" },
   ],
 };
+
+async function uploadPhrases() {
+  console.log("Starting phrase upload to Firestore...");
+
+  for (const categoryId in phraseData) {
+    const categoryPhrases = phraseData[categoryId];
+
+    for (let i = 0; i < categoryPhrases.length; i++) {
+      const phrase = categoryPhrases[i];
+      const docId = `${categoryId}-${i}`;
+
+      await db
+        .collection("phrases")
+        .doc(docId)
+        .set({
+          categoryId,
+          spanish: phrase.phrase || phrase.spanish,
+          english: phrase.translation || phrase.english,
+          phonetic: phrase.phonetic || "",
+          createdAt: new Date().toISOString(),
+        });
+
+      console.log(`Uploaded: ${docId}`);
+    }
+  }
+
+  console.log("Upload complete! Check Firestore.");
+}
+
+uploadPhrases().catch((err) => {
+  console.error("Upload failed:", err);
+});
