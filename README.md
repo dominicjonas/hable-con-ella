@@ -63,7 +63,7 @@ Built as a side project to improve Spanish skills.
 - [x] User login setup
 - [x] Store favourites in db
 - [x] Google login / sign-up
-- [ ] Adding a logout confirmation dialog
+- [x] Toaster confirmation
 - [ ] Backend user setup
 - [ ] Frontend user profile
 - [ ] Store phrases in backend
