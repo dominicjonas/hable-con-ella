@@ -69,6 +69,7 @@ Built as a side project to improve Spanish skills.
 - [ ] Store phrases in backend
 - [ ] GSAP
 - [ ] Framer Motion
+- [ ] FE hosting
 
 ### Phase 3
 
