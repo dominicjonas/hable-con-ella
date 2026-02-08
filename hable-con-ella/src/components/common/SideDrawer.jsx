@@ -19,8 +19,6 @@ const SideDrawer = ({ isOpen, onClose }) => {
     }
   };
 
-  console.log("user>>>>", user);
-
   return (
     <>
       <div className={`drawer-overlay ${isOpen ? "open" : ""}`} onClick={onClose} />

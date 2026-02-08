@@ -73,7 +73,6 @@ export const FavouritesProvider = ({ children }) => {
         }
       } catch (err) {
         console.error("Firestore sync failed:", err);
-        // Optional: rollback local state if you want atomicity
       }
     }
   };
