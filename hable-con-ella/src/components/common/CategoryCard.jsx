@@ -1,23 +1,15 @@
-// src/components/common/CategoryCard.jsx
-import PropTypes from 'prop-types';
-import './CategoryCard.scss';
+import PropTypes from "prop-types";
+import "./CategoryCard.scss";
 
-const CategoryCard = ({
-  title,
-  description,
-  icon,
-  onClick,
-  className = '',
-  disabled = false,
-}) => {
+const CategoryCard = ({ title, description, icon, onClick, className = "", disabled = false }) => {
   return (
     <div
-      className={`category-card ${className} ${disabled ? 'disabled' : ''}`}
+      className={`category-card ${className} ${disabled ? "disabled" : ""}`}
       onClick={!disabled ? onClick : undefined}
       role="button"
       tabIndex={disabled ? -1 : 0}
       onKeyDown={(e) => {
-        if (!disabled && (e.key === 'Enter' || e.key === ' ')) {
+        if (!disabled && (e.key === "Enter" || e.key === " ")) {
           e.preventDefault();
           onClick?.();
         }

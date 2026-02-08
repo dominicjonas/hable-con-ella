@@ -1,4 +1,3 @@
-// src/components/pages/FavouritesPage.jsx
 import { useState } from "react";
 import Icon from "../common/Icon";
 import Header from "../common/Header";

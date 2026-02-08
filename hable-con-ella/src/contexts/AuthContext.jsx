@@ -1,4 +1,3 @@
-// src/contexts/AuthContext.jsx
 import { createContext, useState, useEffect } from "react";
 import { auth, db } from "../firebase";
 import {
@@ -72,4 +71,4 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
-export default AuthContext; // optional – raw context export
+export default AuthContext;

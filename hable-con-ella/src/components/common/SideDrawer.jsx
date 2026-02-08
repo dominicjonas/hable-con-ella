@@ -1,4 +1,3 @@
-// src/components/common/SideDrawer.jsx
 import PropTypes from "prop-types";
 import { toast } from "sonner";
 import { useNavigate } from "react-router-dom";

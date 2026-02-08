@@ -5,7 +5,7 @@ const AuthRedirect = () => {
   const { user, loading } = useAuth();
 
   if (loading) {
-    return <div>Loading...</div>;
+    return null;
   }
 
   // If already logged in → redirect to main app
