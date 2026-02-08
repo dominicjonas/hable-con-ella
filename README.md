@@ -66,7 +66,7 @@ Built as a side project to improve Spanish skills.
 - [x] Toaster confirmation
 - [x] Backend user setup
 - [x] Frontend user profile
-- [ ] Store phrases in backend
+- [x] Store phrases in backend
 - [ ] GSAP
 - [ ] Framer Motion
 - [ ] FE hosting
