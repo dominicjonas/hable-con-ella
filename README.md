@@ -64,8 +64,8 @@ Built as a side project to improve Spanish skills.
 - [x] Store favourites in db
 - [x] Google login / sign-up
 - [x] Toaster confirmation
-- [ ] Backend user setup
-- [ ] Frontend user profile
+- [x] Backend user setup
+- [x] Frontend user profile
 - [ ] Store phrases in backend
 - [ ] GSAP
 - [ ] Framer Motion
