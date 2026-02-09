@@ -1,12 +1,13 @@
 import PropTypes from "prop-types";
 
-import { ChevronLeft, Heart, Menu, Shuffle, HeartIcon } from "lucide-react";
+import { ChevronLeft, Heart, Menu, Shuffle, HeartIcon, Camera } from "lucide-react";
 
 const iconMap = {
   "chevron-left": ChevronLeft,
   menu: Menu,
   shuffle: Shuffle,
   heart: HeartIcon,
+  camera: Camera,
 };
 
 const Icon = ({ name, size = 28, color = "#666", strokeWidth = 2, className = "", onClick, ...props }) => {
