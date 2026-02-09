@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase";
-import { useFavourites } from "../../hooks/useFavourites";
+import { useFavourites } from "../../hooks/usefavourites";
 
 import PhraseLayout from "../common/PhraseLayout";
 import Header from "../common/Header";

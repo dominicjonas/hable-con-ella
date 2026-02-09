@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "../../firebase";
 import PhraseLayout from "../common/PhraseLayout";
-import { useFavourites } from "../../hooks/useFavourites";
+import { useFavourites } from "../../hooks/usefavourites";
 import PhraseCard from "../common/PhraseCard";
 
 const PhrasePage = () => {
