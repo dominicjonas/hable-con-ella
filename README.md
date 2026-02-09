@@ -83,7 +83,8 @@ _(Screenshots to be added soon)_
 - [x] User profile display (name/avatar)
 - [x] Phrase detail / Expanded view
 - [x] Audio pronuciation - Web Speech API (basic)
-- [ ] Settings page / User profile
+- [x] User profile
+- [ ] Settings page
 - [ ] Onboarding / Welcome flow
 - [ ] Frontend hosting (Vercel / Netlify)
 - [ ] Migrate remaining SCSS → Tailwind (optional polish)
