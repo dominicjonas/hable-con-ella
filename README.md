@@ -81,11 +81,18 @@ _(Screenshots to be added soon)_
 - [x] Store favourites in Firestore
 - [x] Migrate static phrases to Firestore
 - [x] User profile display (name/avatar)
+- [x] Phrase detail / Expanded view
+- [x] Audio pronuciation - Web Speech API (basic)
+- [ ] Settings page / User profile
+- [ ] Onboarding / Welcome flow
 - [ ] Frontend hosting (Vercel / Netlify)
 - [ ] Migrate remaining SCSS → Tailwind (optional polish)
 
 ### Phase 3 (planned)
 
+- [ ] SEO & social sharing
+- [ ] Dark mode toggle
+- [ ] Loading skeletons, Improved empty states
 - [ ] Voice recording
 - [ ] Voice upload to storage
 - [ ] Pronunciation checking / speech-to-text
