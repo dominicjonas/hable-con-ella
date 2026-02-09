@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { getDoc, doc } from "firebase/firestore";
 import { db } from "../../firebase"; // adjust path to your firebase config
+// eslint-disable-next-line no-unused-vars
+import { motion, AnimatePresence } from "framer-motion";
 import Icon from "../common/Icon";
 import Header from "../common/Header";
 import ProgressBar from "../common/ProgressBar";
@@ -15,6 +17,13 @@ const FavouritesPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(0); // 1 for next, -1 for prev
+
+  const variants = {
+    hidden: { opacity: 0, x: direction > 0 ? 40 : -40 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } },
+    exit: { opacity: 0, x: direction > 0 ? -40 : 40, transition: { duration: 0.3 } },
+  };
 
   useEffect(() => {
     const fetchFavouritePhrases = async () => {
@@ -66,7 +75,7 @@ const FavouritesPage = () => {
   if (error || favouritePhrases.length === 0) {
     return (
       <div className="favourites-page">
-        <Header title="Favourites" showBackButton={true} />
+        <Header title="Favourites" showBackButton={true} showRightContent={true} />
 
         <div className="empty-state">
           <p>{error || "No favourites yet. Heart some phrases to see them here!"}</p>
@@ -78,11 +87,17 @@ const FavouritesPage = () => {
   const currentFavourite = favouritePhrases[currentIndex];
 
   const handlePrev = () => {
-    if (currentIndex > 0) setCurrentIndex(currentIndex - 1);
+    if (currentIndex > 0) {
+      setDirection(-1);
+      setCurrentIndex(currentIndex - 1);
+    }
   };
 
   const handleNext = () => {
-    if (currentIndex < favouritePhrases.length - 1) setCurrentIndex(currentIndex + 1);
+    if (currentIndex < favouritePhrases.length - 1) {
+      setDirection(1);
+      setCurrentIndex(currentIndex + 1);
+    }
   };
 
   const handleUnfavourite = () => {
@@ -95,7 +110,7 @@ const FavouritesPage = () => {
 
   return (
     <div className="favourites-page">
-      <Header title="Favourites" showBackButton={true} />
+      <Header title="Favourites" showBackButton={true} showRightContent={true} />
 
       <ProgressBar current={currentIndex + 1} total={favouritePhrases.length} />
 
@@ -120,16 +135,28 @@ const FavouritesPage = () => {
         />
       </div>
 
-      <div className="phrase-content">
-        <div className="phrase-card">
-          <h2 className="phrase-spanish">{currentFavourite.spanish}</h2>
-          <p className="phrase-english">{currentFavourite.english}</p>
-          <p className="phrase-phonetic">/{currentFavourite.phonetic}/</p>
+      <div className="phrase-content-wrapper">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            custom={direction}
+            variants={variants}
+            initial={false}
+            animate="visible"
+            exit="exit"
+            className="phrase-content"
+          >
+            <div className="phrase-card">
+              <h2 className="phrase-spanish">{currentFavourite.spanish}</h2>
+              <p className="phrase-english">{currentFavourite.english}</p>
+              <p className="phrase-phonetic">/{currentFavourite.phonetic}/</p>
 
-          <p className="phrase-category">
-            From: {currentFavourite.categoryId.charAt(0).toUpperCase() + currentFavourite.categoryId.slice(1)}
-          </p>
-        </div>
+              <p className="phrase-category">
+                From: {currentFavourite.categoryId.charAt(0).toUpperCase() + currentFavourite.categoryId.slice(1)}
+              </p>
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
 
       <FooterNav onPrev={handlePrev} onNext={handleNext} currentIndex={currentIndex} total={favouritePhrases.length} />
