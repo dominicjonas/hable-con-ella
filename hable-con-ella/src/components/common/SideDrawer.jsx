@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { toast } from "sonner";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
 import "./style/SideDrawer.scss";
 
@@ -36,25 +36,25 @@ const SideDrawer = ({ isOpen, onClose }) => {
         <nav className="drawer-nav">
           <ul>
             <li>
-              <a href="/" onClick={onClose}>
+              <Link to="/" onClick={onClose}>
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" onClick={onClose}>
+              <Link to="/profile" onClick={onClose}>
                 Profile
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/categories" onClick={onClose}>
+              <Link to="/categories" onClick={onClose}>
                 Categories
-              </a>
+              </Link>
             </li>
             {user && (
               <li>
-                <a href="/favourites" onClick={onClose}>
+                <Link to="/favourites" onClick={onClose}>
                   Favourites
-                </a>
+                </Link>
               </li>
             )}
             <li>
@@ -64,15 +64,15 @@ const SideDrawer = ({ isOpen, onClose }) => {
             </li>
             {user && (
               <li className="logout">
-                <a
-                  href="#"
+                <Link
+                  to="/login"
                   onClick={(e) => {
                     e.preventDefault();
                     handleLogout();
                   }}
                 >
                   Log out
-                </a>
+                </Link>
               </li>
             )}
           </ul>

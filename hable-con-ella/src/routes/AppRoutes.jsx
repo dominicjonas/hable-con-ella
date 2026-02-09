@@ -6,6 +6,7 @@ import Login from "../components/pages/LoginPage";
 import CategoryPage from "../components/pages/CategoryPage";
 import PhrasePage from "../components/pages/PhrasePage";
 import FavouritesPage from "../components/pages/FavouritesPage";
+import ProfilePage from "../components/pages/ProfilePage";
 import AuthRootRedirect from "./AuthRouteRedirect";
 
 export default function AppRoutes() {
@@ -25,6 +26,7 @@ export default function AppRoutes() {
         <Route path="/categories" element={<CategoryPage />} />
         <Route path="/phrase/:categoryId" element={<PhrasePage />} />
         <Route path="/favourites" element={<FavouritesPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Route>
 
       {/* 404 */}
