@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "./CategoryCard.scss";
+import "./style/CategoryCard.scss";
 
 const CategoryCard = ({ title, description, icon, onClick, className = "", disabled = false }) => {
   return (

@@ -8,7 +8,7 @@ import { useFavourites } from "../../hooks/useFavourites";
 import PhraseLayout from "../common/PhraseLayout";
 import Header from "../common/Header";
 import PhraseCard from "../common/PhraseCard";
-import "./PhrasePage.scss";
+import "./style/PhrasePage.scss";
 
 const FavouritesPage = () => {
   const { favourites: favouriteIds, isFavourited, toggleFavourite } = useFavourites();

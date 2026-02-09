@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import Icon from "./Icon";
-import "./FooterNav.scss";
+import "./style/FooterNav.scss";
 
 const FooterNav = ({ onPrev, onNext, currentIndex, total }) => {
   return (

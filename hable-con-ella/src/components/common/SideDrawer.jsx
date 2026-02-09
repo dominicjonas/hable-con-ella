@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { toast } from "sonner";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
-import "./SideDrawer.scss";
+import "./style/SideDrawer.scss";
 
 const SideDrawer = ({ isOpen, onClose }) => {
   const { user } = useAuth();

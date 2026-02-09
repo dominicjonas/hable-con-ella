@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import CategoryCard from "../common/CategoryCard";
 import Header from "../common/Header";
-import "./CategoryPage.scss";
 import { useAuth } from "../../hooks/useAuth";
 import { categories } from "../../data/categories";
+import "./style/CategoryPage.scss";
 
 const CategoryPage = () => {
   const navigate = useNavigate();

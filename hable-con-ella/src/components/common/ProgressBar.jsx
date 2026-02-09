@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "./ProgressBar.scss";
+import "./style/ProgressBar.scss";
 
 const ProgressBar = ({ current, total }) => {
   const progress = (current / total) * 100;

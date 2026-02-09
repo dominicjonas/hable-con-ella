@@ -1,7 +1,7 @@
 import Header from "../common/Header";
 import Button from "../common/Button";
 import { useNavigate } from "react-router-dom";
-import "./IntroPage.scss";
+import "./style/IntroPage.scss";
 
 const IntroPage = () => {
   const navigate = useNavigate();

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import { useAuth } from "../../hooks/useAuth";
 import Button from "../common/Button";
-import "./AuthPages.scss";
+import "./style/AuthPages.scss";
 
 const SignupPage = () => {
   const [email, setEmail] = useState("");

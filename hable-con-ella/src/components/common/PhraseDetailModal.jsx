@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 import { toast } from "sonner";
-import "./PhraseDetailModal.scss";
+import "./style/PhraseDetailModal.scss";
 
 const PhraseDetailModal = ({ phrase, isOpen, onClose }) => {
   const playAudio = () => {

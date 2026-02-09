@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 import Icon from "./Icon";
-import "./Header.scss";
+import "./style/Header.scss";
 import SideDrawer from "./SideDrawer";
 
 const Header = ({
