@@ -7,6 +7,8 @@ It emphasises authentic conversational expressions, including voseo conjugations
 
 Built as a side project to improve Spanish fluency.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-hable--con--ella.vercel.app-blue)](https://hable-con-ella.vercel.app)
+
 ## Current Status
 
 - Phase 1: MVP complete (static phrases, categories, favourites via context/localStorage)
