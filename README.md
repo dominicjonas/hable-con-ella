@@ -87,6 +87,7 @@ _(Screenshots to be added soon)_
 - [x] Audio pronuciation - Web Speech API (basic)
 - [x] User profile
 - [x] Home page
+- [x] Loader
 - [ ] Settings page
 - [ ] Onboarding / Welcome flow
 - [x] Frontend hosting (Vercel / Netlify)

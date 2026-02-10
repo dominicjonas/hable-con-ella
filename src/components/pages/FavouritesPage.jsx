@@ -8,6 +8,7 @@ import { useFavourites } from "../../hooks/usefavourites";
 import PhraseLayout from "../common/PhraseLayout";
 import Header from "../common/Header";
 import PhraseCard from "../common/PhraseCard";
+import LoadingSpinner from "../common/LoadingSpinner";
 import "./style/PhrasePage.scss";
 
 const FavouritesPage = () => {
@@ -45,7 +46,7 @@ const FavouritesPage = () => {
       <div className="favourites-page">
         <Header title="Favourites" showBackButton={true} showRightContent={true} />
         <div className="empty-state">
-          <p>{loading ? "Loading..." : "No favourites yet."}</p>
+          <span>{loading ? <LoadingSpinner message="Loading favourites..." /> : "No favourites yet."}</span>
         </div>
       </div>
     );
