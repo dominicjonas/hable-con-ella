@@ -1,0 +1,45 @@
+.progress-bar-container {
+  padding: 0.5rem 1.5rem;
+  margin: 0 auto;
+  position: sticky;
+  top: 80px;
+  z-index: 95;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  background: #fff;
+  max-width: 1200px;
+}
+
+.progress-bar-track {
+  width: 100%;
+  height: 6px;
+  background-color: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #0f172a;
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+// Mobile tweaks
+@media (max-width: 768px) {
+  .progress-bar-container {
+    padding: 0.5rem 1rem;
+  }
+
+  .progress-bar-track {
+    height: 5px;
+  }
+}
