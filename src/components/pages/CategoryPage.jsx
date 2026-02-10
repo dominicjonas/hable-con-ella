@@ -29,7 +29,7 @@ const CategoryPage = () => {
 
   return (
     <>
-      <Header showBackButton={!user} showRightContent={true} title="Categorías" />
+      <Header showBackButton={user} showRightContent={true} title="Categorías" />
       <div className="category-page-container">
         <motion.div className="category-card-container" variants={containerVariants}>
           {categories.map((category) => (

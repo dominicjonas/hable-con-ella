@@ -38,7 +38,7 @@ const SideDrawer = ({ isOpen, onClose }) => {
         <nav className="drawer-nav">
           <ul>
             <li>
-              <Link to="/" onClick={onClose}>
+              <Link to="/home" onClick={onClose}>
                 Home
               </Link>
             </li>

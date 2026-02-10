@@ -135,7 +135,7 @@ const ProfilePage = () => {
             {error && <p className="error">{error}</p>}
 
             <div className="profile-actions">
-              <Button variant="outline" size="md" onClick={handleLogout}>
+              <Button variant="outline-accent" size="md" onClick={handleLogout}>
                 Log Out
               </Button>
             </div>
