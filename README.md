@@ -86,10 +86,11 @@ _(Screenshots to be added soon)_
 - [x] Phrase detail / Expanded view
 - [x] Audio pronuciation - Web Speech API (basic)
 - [x] User profile
+- [x] Home page
 - [ ] Settings page
 - [ ] Onboarding / Welcome flow
-- [ ] Frontend hosting (Vercel / Netlify)
-- [ ] Migrate remaining SCSS → Tailwind (optional polish)
+- [x] Frontend hosting (Vercel / Netlify)
+- [ ] Polish SCSS
 
 ### Phase 3 (planned)
 
