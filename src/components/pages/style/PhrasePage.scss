@@ -28,6 +28,13 @@
   border-radius: 0;
   padding: 0;
   border: none;
+  outline: none !important;
+
+  &:focus-visible {
+    outline: 3px solid #be185d;
+    outline-offset: 4px;
+    border-radius: 12px;
+  }
 
   &:focus {
     outline: none;
