@@ -37,7 +37,7 @@ const PhrasePage = () => {
   }
 
   const currentPhrase = phrases[currentIndex];
-  const phraseId = `${categoryId}-${currentIndex + 1}`;
+  const phraseId = `${categoryId}-${currentIndex}`;
 
   const handlePrev = () => {
     if (currentIndex > 0) {
