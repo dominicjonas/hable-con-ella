@@ -3,6 +3,7 @@ import AuthRedirect from "./AuthRedirect";
 import ProtectedRoute from "./ProtectedRoute";
 import SignupPage from "../components/pages/SignupPage";
 import Login from "../components/pages/LoginPage";
+import HomePage from "../components/pages/HomePage";
 import CategoryPage from "../components/pages/CategoryPage";
 import PhrasePage from "../components/pages/PhrasePage";
 import FavouritesPage from "../components/pages/FavouritesPage";
@@ -23,6 +24,7 @@ export default function AppRoutes() {
 
       {/* Protected routes for logged-in users */}
       <Route element={<ProtectedRoute />}>
+        <Route path="/home" element={<HomePage />} />
         <Route path="/categories" element={<CategoryPage />} />
         <Route path="/phrase/:categoryId" element={<PhrasePage />} />
         <Route path="/favourites" element={<FavouritesPage />} />
