@@ -10,7 +10,7 @@ const AuthRedirect = () => {
 
   // If already logged in → redirect to main app
   if (user) {
-    return <Navigate to="/categories" replace />;
+    return <Navigate to="/home" replace />;
   }
 
   // Not logged in → show the login/signup page

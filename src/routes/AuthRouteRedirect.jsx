@@ -9,9 +9,9 @@ const AuthRootRedirect = () => {
     return <div>Verifying session...</div>;
   }
 
-  // If logged in → go to categories
+  // If logged in → go to home page
   if (user) {
-    return <Navigate to="/categories" replace />;
+    return <Navigate to="/home" replace />;
   }
 
   // Not logged in → show IntroPage

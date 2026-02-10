@@ -36,7 +36,7 @@ const SignupPage = () => {
 
     try {
       await signup(email, password, displayName);
-      navigate("/categories");
+      navigate("/home");
       toast.success("Account created successfully! ¡Bienvenida!");
     } catch (err) {
       let message = "Failed to create account. Please try again.";
@@ -56,7 +56,7 @@ const SignupPage = () => {
   const handleGoogleSignIn = async () => {
     try {
       await signInWithGoogle();
-      navigate("/categories");
+      navigate("/home");
     } catch (err) {
       setError(err.message || "Google sign-in failed, please try again.");
     }

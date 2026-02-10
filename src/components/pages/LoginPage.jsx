@@ -21,7 +21,7 @@ const Login = () => {
 
     try {
       await login(email, password);
-      navigate("/categories");
+      navigate("/home");
       toast.success("Logged in successfully! ¡Bienvenida de nuevo!");
     } catch (err) {
       toast.error("Login failed, please try again. ¡Qué macana! " + (err.message || ""));
@@ -33,7 +33,7 @@ const Login = () => {
   const handleGoogleSignIn = async () => {
     try {
       await signInWithGoogle();
-      navigate("/categories");
+      navigate("/home");
       toast.success("Logged in with Google! ¡Bienvenida de nuevo!");
     } catch (err) {
       toast.error("Google sign-in failed, please try again. ¡Qué macana! " + (err.message || ""));
