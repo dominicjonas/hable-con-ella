@@ -20,7 +20,7 @@ export const categories = [
     icon: "✈️",
   },
   {
-    id: "vida-diaria",
+    id: "vidaDiaria",
     title: "Vida Diaria",
     icon: "☕️",
   },
