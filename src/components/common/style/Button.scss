@@ -59,7 +59,7 @@ $neutral-dark: #374151; // Dark gray for secondary text
 
     &:hover:not(:disabled),
     &:active:not(:disabled) {
-      background: darken($neutral-light, 8%);
+      background: scale($neutral-light, 8%);
     }
   }
 

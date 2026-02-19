@@ -29,4 +29,9 @@ export const categories = [
     title: "Expresiones",
     icon: "💬",
   },
+  {
+    id: "talking-to-dogs",
+    title: "Talking to dogs",
+    icon: "🐕",
+  },
 ];
